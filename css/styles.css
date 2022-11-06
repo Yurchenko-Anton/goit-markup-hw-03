@@ -285,38 +285,36 @@ footer li:not(:last-child){
     color: var(--blue-color);
 }
 .main-buttons{
-    margin-bottom: 50px;
-}
-.main-buttons ul{
     display: flex;
     gap: 8px;
     justify-content: center;
+    margin-bottom: 50px;
 }
 /* Portfolio */
 .main-buttons button{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black-color);
+    padding: 6px 25px;
 }
 .main-buttons button:hover, button:focus{
     cursor: pointer;
     background: var(--dark-blue-color);
+    color: var(--white-color);
     /* shadow-middle */
 
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
-.main-buttons span:hover{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    /* identical to box height, or 162% */
-
-    text-align: center;
-
-    color: var(--white-color);
+.portfolio  h1{
+   text-align: center;
+    margin-bottom: 50px;
 }
-.main-images h3{
+.main-images h2{
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -331,7 +329,7 @@ footer li:not(:last-child){
 
     color: var(--light-black-color);
 }
-.main-images ul{
+.main-images{
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
@@ -339,8 +337,6 @@ footer li:not(:last-child){
 }
 .main-images li{
     width: 370px;
-    height: 404px;
-    outline: 2px solid #EEEEEE;
 }
 .main-images p{
     font-style: normal;
