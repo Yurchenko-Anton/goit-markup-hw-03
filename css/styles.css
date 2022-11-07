@@ -33,6 +33,18 @@ ul{
 img{
     display: block;
 }
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 .container{
     width: 1200px;
     padding-left: 15px;
@@ -40,7 +52,7 @@ img{
     margin: 0 auto;
 }
 .section{padding-top:94px;padding-bottom:94px}
-.section.main-section-ourjob{
+.section.ourjob-item{
     padding-top: 0;
 }
 .header{
@@ -65,6 +77,9 @@ img{
 }
 .navigation{
     margin-right: auto;
+}
+.navigation a {
+    color: var(--black-color)
 }
 .logo > span {
     color: var(--blue-color)
@@ -148,7 +163,7 @@ white-space: pre-line;
     line-height: 42px;
     color: var(--light-black-color);
 }
-.main-section-strongside h3{
+.strongside-item h3{
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -159,7 +174,7 @@ white-space: pre-line;
 
 
 }
-.main-section-strongside p{
+.strongside-item p{
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -174,10 +189,10 @@ white-space: pre-line;
 .strongside-item li{
     max-width: 270px;
 }
-.main-section-strongside{
-    margin-bottom: 150px;
+.strongside-item{
+    margin-bottom: 100px;
 }
-.main-section-ourjob {
+.ourjob-item {
     margin-bottom: 94px;
 }
 .ourjob-item {
@@ -212,7 +227,7 @@ white-space: pre-line;
 }
 .employee{
     padding-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 }
 .main-section-ourteam p{
     font-style: normal;
@@ -300,6 +315,7 @@ footer li:not(:last-child){
     line-height: 26px;
     color: var(--black-color);
     padding: 6px 25px;
+    border: 0;
 }
 .main-buttons button:hover, button:focus{
     cursor: pointer;
@@ -323,11 +339,14 @@ footer li:not(:last-child){
 
     letter-spacing: 0.06em;
 
-    margin-top: 30px;
     margin-bottom: 5px;
-    margin-left: 24px;
 
     color: var(--light-black-color);
+}
+.images{
+    margin-top: 30px;
+    margin-left: 24px;
+    padding-bottom: 20px;
 }
 .main-images{
     display: flex;
@@ -336,7 +355,10 @@ footer li:not(:last-child){
     margin-bottom: 94px;
 }
 .main-images li{
-    width: 370px;
+    width: calc((100% - 60px)/3);
+}
+.main-images li:nth-child(3n){
+    margin: 0;
 }
 .main-images p{
     font-style: normal;
@@ -346,8 +368,6 @@ footer li:not(:last-child){
     /* identical to box height, or 188% */
 
     color: var(--grey-color);
-    padding-bottom: 20px;
-    margin-left: 24px;
 }
 .footer-portfolio{
     background: var(--dark-grey-color);
